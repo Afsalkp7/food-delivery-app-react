@@ -53,3 +53,12 @@
     margin: 5px;
     background-color: #f0f0f0;
 }
+
+.login-btn {
+    padding: 10px;
+    background: #000;
+    color: white;
+    margin-right: 20px;
+    border-radius: 12px;
+    width:80px;
+}

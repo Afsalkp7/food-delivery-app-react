@@ -7,9 +7,9 @@ import Shimmer from "./Shimmer";
 const Body = () => {
     const [list,setList] = useState([]) 
     useEffect(async()=> {
-        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=11.0509762&lng=76.0710967&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
+        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=11.2469918&lng=75.7855555&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
         const obj = await data.json()
-        setList(obj?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setList(obj.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
     },[])
 
     if (list.length === 0) {
