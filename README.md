@@ -31,5 +31,11 @@
 
  # Reacyt Hooks
  (Normal javascript utility function)
+ - its an utility function it make some utility
+ example:-
  - useState()
  - useEffect()
+
+ whenever a state variable updates react re render the component
+
+# React reconciliation algorithm (React fiber)
