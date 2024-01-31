@@ -39,3 +39,6 @@
  whenever a state variable updates react re render the component
 
 # React reconciliation algorithm (React fiber)
+
+# state variable 
+when ever a set variable update , react triggers a reconciliation cycle (re render the component)

@@ -62,3 +62,8 @@
     border-radius: 12px;
     width:80px;
 }
+
+.filter-btn {
+    display: flex;
+    padding: 10px;
+}
