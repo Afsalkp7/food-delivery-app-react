@@ -8,6 +8,8 @@ import About from "./components/About";
 import Error from "./components/Error";
 import { Outlet } from "react-router-dom";
 import ResMenu from "./components/ResMenu";
+import User from "./components/UserFunction";
+import UserClass from "./components/UserClass";
 
 const AppLayOut = () => {
   return (
