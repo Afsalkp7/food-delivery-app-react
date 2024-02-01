@@ -75,3 +75,6 @@ when ever a set variable update , react triggers a reconciliation cycle (re rend
  # 2 Types of routes
  - server side routes
  - client side routes
+
+# useParams
+ - use params for navigation params dynamically
