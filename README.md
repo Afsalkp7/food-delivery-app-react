@@ -78,3 +78,23 @@ when ever a set variable update , react triggers a reconciliation cycle (re rend
 
 # useParams
  - use params for navigation params dynamically
+
+# Life cycle method
+ - parent constructor
+ - parent render
+ - child constructor
+ - child render
+ - child didmount
+ - parent didmount
+
+- In mutiple child 
+
+- parent constructor
+- parent render
+- first child constructor
+- first child render
+- second child constructor
+- second child render
+- first didmount
+- second didmount
+- parent didmount

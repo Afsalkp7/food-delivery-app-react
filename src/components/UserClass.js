@@ -7,6 +7,10 @@ class UserClass extends React.Component {
       count: 0
     };
   }
+
+  componentDidMount() {
+    console.log("component didmount");
+  }
   render() {
     const {name,place} = this.props
     return (
