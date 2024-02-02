@@ -80,12 +80,28 @@ when ever a set variable update , react triggers a reconciliation cycle (re rend
  - use params for navigation params dynamically
 
 # Life cycle method
+----------------------------
  - parent constructor
  - parent render
  - child constructor
  - child render
  - child didmount
  - parent didmount
+
+IN CASE OF CLASS COMPONENT
+----------------------------
+ - constructor
+ - render
+ - dom update (dummy data)
+ - componentDidMount
+ - update data through setState()
+ - render
+ - dom update (actual data)
+ - componentDidUpdate
+ -------------------------
+ Then Left from that page to another page that time 
+ - componentUnMount
+ is work
 
 - In mutiple child 
 
@@ -98,3 +114,15 @@ when ever a set variable update , react triggers a reconciliation cycle (re rend
 - first didmount
 - second didmount
 - parent didmount
+
+IN CASE OF FUNCTIONAL COMPONENT
+------------------------------------
+- render 
+- dom update (with dummy data)
+- useEffect work 
+- render
+- dom update (with actual data)
+------------------------------------
+ Then Left from that page to another page that time 
+ -useEffect return
+ is work
