@@ -126,3 +126,8 @@ IN CASE OF FUNCTIONAL COMPONENT
  Then Left from that page to another page that time 
  -useEffect return
  is work
+
+ # Custom hooks
+ - made a file in utils with starting "use"
+ - then create a function on it and export from there
+ - import that function and use it on the required place

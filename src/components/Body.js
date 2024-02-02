@@ -33,7 +33,7 @@ const Body = () => {
                 }}>Search</button>
             </div>
             <button className="most-rated" onClick={()=>{
-                const filtered = list.filter((res)=>res.info.avgRatingString > 4)
+                const filtered = list.filter((res)=>res.info.avgRatingString > 4.4)
                 setFilteredList(filtered)
             }}>most rated</button>
         </div>
