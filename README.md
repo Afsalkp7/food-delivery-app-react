@@ -131,3 +131,10 @@ IN CASE OF FUNCTIONAL COMPONENT
  - made a file in utils with starting "use"
  - then create a function on it and export from there
  - import that function and use it on the required place
+
+ # Optimization
+ - Made bundle of code in to smaller parts its known in different names eg:-
+  -Chunking
+  -Code splitting
+  -Dynamic Bundling
+  

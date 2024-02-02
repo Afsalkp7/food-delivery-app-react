@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const User = (props)=>{
     const [count,setCount] = useState(0);
-
+   
     return (<div>
         <h1>full name : {props.name}</h1>
         <h2>place : {props.place}</h2>

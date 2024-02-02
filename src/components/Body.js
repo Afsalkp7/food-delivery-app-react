@@ -2,9 +2,10 @@ import RestaurentCard from "./RestaurentCard";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Shimmer from "./Shimmer";
-
+import useCheckOnline from "../utils/useCheckOnline";
 
 const Body = () => {
+   
     const [list,setList] = useState([]) 
     const [filteredList,setFilteredList] = useState([])
     const [searchText , setSearchText] = useState("")  
@@ -16,10 +17,19 @@ const Body = () => {
         setList(obj?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setFilteredList(obj?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     },[])
+
+    const checkOnline = useCheckOnline()
+    
+    if (checkOnline === false) {
+      return (
+        <div>you are in offline</div>
+      )
+    }
     
     if (list.length == 0) {
         return <Shimmer />
     }
+
 
     return (
         
