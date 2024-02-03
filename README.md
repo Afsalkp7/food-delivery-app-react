@@ -137,4 +137,44 @@ IN CASE OF FUNCTIONAL COMPONENT
   -Chunking
   -Code splitting
   -Dynamic Bundling
-  
+  -Lazy loading
+  -On demand loading
+  -Dynamic import
+
+ # Lazy 
+ Lazy is an function from react by named exporting
+ Lazy takes a callback function
+ In this callback function return a funcion import with path of component as argument
+  -----------------------------------------------------------------------
+  eg:- const Grocery = lazy(()=> import ('../components/Grocery'))
+  -----------------------------------------------------------------------
+ Regularly in our app all the scripts are bundled in a single bundle 
+ In case of large applications there are somany scripts are included so that file need big storage space and take too time to load
+ That time this lazy loading is make small multiple bundles for that 
+ when we render that component that time only the lazy script work
+
+ 1 big bundler ---split---> 2 small bundles 
+
+ # Suspense
+ Its an Component from react exporting by named
+ 
+ In case of lazy loading the js file not in our app even we run the component import in lazy
+ when we click to enter that component that time only load that js file and it take some time (12ms)
+ but react is very fast , during that time react try to load that component and cant find js file so render an error
+
+ In this case we use Suspense component 
+ we wrap the component with suspense component and this take an prop named "fallback" , that prop are a jsx
+ This jsx run between the time taken to load js file
+  --------------------------------------------------------------
+  <Suspense fallback={<h1>Loading...</h1>}><Grocery /></Suspense>
+  --------------------------------------------------------------
+
+  # methods to styling
+  - normal css
+  - scss sass
+  - style component
+  - bootstrap
+  - chakra ui
+  - meterial ui
+  - antstyle ui
+  - tailwind css

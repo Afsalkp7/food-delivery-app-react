@@ -7,25 +7,25 @@ const Header = () => {
   const [logStatus, setLogStatus] = useState("Login");
   const onlineStatus = useCheckOnline();
   return (
-    <div className="header">
+    <div className="flex justify-between">
       <div className="logoContainer">
-        <img className="logo" src={LOGO_URL} />
+        <img className="w-52" src={LOGO_URL} />
       </div>
       <div className="navItems">
-        <ul>
-          <li>
+        <ul className="flex m-5 p-5">
+          <li className="px-5">
             online : {onlineStatus ? "✅" :"🟥"}
           </li>
-          <li>
+          <li className="px-5">
             <Link to="/">Home</Link>
           </li>
-          <li>
+          <li className="px-5">
             <Link to="/contact">Contact us</Link>
           </li>
-          <li>
+          <li className="px-5">
             <Link to="/about">About us</Link>
           </li>
-          <li>Cart</li>
+          <li className="px-5">Cart</li>
           <button
             className="login-btn"
             onClick={() => {

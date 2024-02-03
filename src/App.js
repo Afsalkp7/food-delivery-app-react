@@ -4,12 +4,12 @@ import Header from "./components/Header";
 import Body from "./components/Body";
 import { createBrowserRouter,RouterProvider  } from "react-router-dom";
 import Contact from "./components/Contact";
-import About from "./components/About";
+// import About from "./components/About";
 import Error from "./components/Error";
 import { Outlet } from "react-router-dom";
 import ResMenu from "./components/ResMenu";
-import User from "./components/UserFunction";
-import UserClass from "./components/UserClass";
+import { lazy,Suspense } from "react";
+const About = lazy(()=> import ('./components/About'))
 
 const AppLayOut = () => {
   return (
@@ -35,7 +35,7 @@ const appRouter = createBrowserRouter([
       },
       {
         path : "/about",
-        element :<About />
+        element :<Suspense fallback={<h1>loading....</h1>}><About /></Suspense>
       },
       {
         path : "/restaurants/:id",
