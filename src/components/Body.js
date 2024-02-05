@@ -1,4 +1,4 @@
-import RestaurentCard from "./RestaurentCard";
+import RestaurentCard, { labelOptions } from "./RestaurentCard";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Shimmer from "./Shimmer";
@@ -9,7 +9,7 @@ const Body = () => {
     const [list,setList] = useState([]) 
     const [filteredList,setFilteredList] = useState([])
     const [searchText , setSearchText] = useState("")  
-
+    const labeling = labelOptions(RestaurentCard)
 
     useEffect(() => {
       const fetchData = async () => {
@@ -45,7 +45,7 @@ const Body = () => {
       <div className="body">
         <div className="flex justify-between m-5">
             
-            <button className="bg-green-200 px-4 bold" onClick={()=>{
+            <button className="bg-green-200 px-4 font-bold" onClick={()=>{
                 const filtered = list.filter((res)=>res.info.avgRatingString > 4.4)
                 setFilteredList(filtered)
             }}>Most rated</button>
@@ -58,7 +58,9 @@ const Body = () => {
             </div>
         </div>
         <div className="flex flex-wrap ml-5">
-          {filteredList.map((restuarent) => (<Link key={restuarent.info.id}  to={"/restaurants/"+restuarent.info.id}><RestaurentCard resData={restuarent}/></Link>))}
+          {filteredList.map((restuarent) => (<Link key={restuarent.info.id}  to={"/restaurants/"+restuarent.info.id}>
+            <RestaurentCard resData={restuarent}/>
+            </Link>))}
         </div>
       </div>
     );

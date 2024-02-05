@@ -178,3 +178,6 @@ IN CASE OF FUNCTIONAL COMPONENT
   - meterial ui
   - antstyle ui
   - tailwind css
+
+# Higher order component
+ Its a function that take a component and return a component (same with some extra features)

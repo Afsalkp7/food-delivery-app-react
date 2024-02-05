@@ -1,22 +1,12 @@
-// import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
-
 import useResMenu from "../utils/useResMenu";
 
 const ResMenu = () => {
 
-    // const [menuList , setMenuList] = useState(null)
     const {id} = useParams()
     const menuList = useResMenu(id)
-    // useEffect(()=>{
-    //     fetchMenu()
-    // },[])
-    // const fetchMenu = async () => {
-    //     const data = await fetch(MENU_URL_1+id+MENU_URL_2)
-    //     const menu = await data.json()
-    //     setMenuList(menu.data)
-    // }
+   
     if (menuList === null) {
         return <Shimmer />
     }
@@ -25,11 +15,11 @@ const ResMenu = () => {
     console.log(menu);
        return (
         <div>
-            <h1>{name}</h1>
-            <h2>{cuisines.join(",")}</h2>
-            <h3>Menu</h3>
-            <ul>
-                {menu.map((item)=><li key={item?.card?.info?.id}>{item?.card?.info?.name}</li>)}
+            <span className="font-bold text-2xl flex justify-center">{name}</span>
+            <h2  className="font-bold text-lg flex justify-center">{cuisines.join(",")}</h2>
+            <h3  className="font-bold text-md flex justify-center">Menu</h3>
+            <ul >
+                {menu.map((item)=><li  className=" flex justify-center" key={item?.card?.info?.id}>{item?.card?.info?.name} - {item?.card?.info?.price || item?.card?.info?.variantsV2.variantGroups[0].variations[0].price}</li>)}
             </ul>
         </div>
     )
