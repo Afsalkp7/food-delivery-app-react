@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -9,16 +9,31 @@ import Error from "./components/Error";
 import { Outlet } from "react-router-dom";
 import ResMenu from "./components/ResMenu";
 import { lazy,Suspense } from "react";
-const About = lazy(()=> import ('./components/About'))
+import UserContext from "./utils/UserContext";
+const About = lazy(()=> import ('./components/About'));
+
+
+
 
 const AppLayOut = () => {
+  const [userName,setUserName] = useState("") ;
+useEffect(()=>{
+  const data = {
+    name : "afsal"
+  };
+  setUserName(data.name)
+},[])
   return (
+    <UserContext.Provider value={{loggedUser:userName , setUserName}}>
     <div className="App">
       <Header />
       <Outlet />
     </div>
+    </UserContext.Provider>
   );
 };
+
+
 
 const appRouter = createBrowserRouter([
   {

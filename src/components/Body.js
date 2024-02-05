@@ -1,9 +1,9 @@
 import RestaurentCard, { labelOptions } from "./RestaurentCard";
-import { useEffect, useState } from "react";
+import { useEffect, useState , useContext } from "react";
 import { Link } from "react-router-dom";
 import Shimmer from "./Shimmer";
 import useCheckOnline from "../utils/useCheckOnline";
-
+import UserContext from "../utils/UserContext"; 
 const Body = () => {
    
     const [list,setList] = useState([]) 
@@ -38,7 +38,7 @@ const Body = () => {
         return <Shimmer />
     }
 
-
+    const {setUserName,loggedUser} = useContext(UserContext)
     return (
         
       <div className="body">
@@ -48,6 +48,9 @@ const Body = () => {
                 const filtered = list.filter((res)=>res.info.avgRatingString > 4.4)
                 setFilteredList(filtered)
             }}>Most rated</button>
+            <div>userName:
+              <input className=" border-gray-950 " value={loggedUser} onChange={(e)=>setUserName(e.target.value)}/>
+            </div>
             <div>
                 <input className="border border-black text-black" value={searchText} onChange={(e)=>setSearchText(e.target.value)}/>
                 <button className="bg-green-200 px-4" onClick={()=>{
