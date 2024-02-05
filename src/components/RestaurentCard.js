@@ -1,7 +1,6 @@
 import { DATA_URL } from "../utils/constants";
 const RestaurentCard = (props) => {
     const { resData } = props;
-    
     return (
       <div className="w-[200px] p-3 rounded-lg mx-2 h-[450px] mb-3 bg-gray-100 hover:bg-gray-200">
         <img
@@ -23,8 +22,8 @@ const RestaurentCard = (props) => {
   };
 
   export const labelOptions = (RestaurentCard)=>{
-    return () => {
-      return (<><div>label</div><RestaurentCard /></>)
+    return (props) => {
+      return (<><div className="absolute m-1 p-2 bg-green-400 rounded-lg">VEG</div><RestaurentCard {...props}/></>)
     }
   }
 

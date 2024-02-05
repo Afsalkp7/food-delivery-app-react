@@ -9,7 +9,7 @@ const Body = () => {
     const [list,setList] = useState([]) 
     const [filteredList,setFilteredList] = useState([])
     const [searchText , setSearchText] = useState("")  
-    const labeling = labelOptions(RestaurentCard)
+    const Labeling = labelOptions(RestaurentCard)
 
     useEffect(() => {
       const fetchData = async () => {
@@ -34,7 +34,6 @@ const Body = () => {
         <div>you are in offline</div>
       )
     }
-    
     if (list.length === 0) {
         return <Shimmer />
     }
@@ -59,7 +58,8 @@ const Body = () => {
         </div>
         <div className="flex flex-wrap ml-5">
           {filteredList.map((restuarent) => (<Link key={restuarent.info.id}  to={"/restaurants/"+restuarent.info.id}>
-            <RestaurentCard resData={restuarent}/>
+            {restuarent.info.veg ? (<Labeling resData={restuarent} />) :(<RestaurentCard resData={restuarent}/>)}
+
             </Link>))}
         </div>
       </div>
