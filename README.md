@@ -181,3 +181,11 @@ IN CASE OF FUNCTIONAL COMPONENT
 
 # Higher order component
  Its a function that take a component and return a component (same with some extra features)
+
+
+# REDUX toolkit
+ - install @redux/toolkit
+ - install react-redux
+ - build a store
+ - connect store to app
+ - create slice

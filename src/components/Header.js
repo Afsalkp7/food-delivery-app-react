@@ -3,11 +3,15 @@ import { LOGO_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
 import useCheckOnline from "../utils/useCheckOnline";
 import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const [logStatus, setLogStatus] = useState("Login");
   const onlineStatus = useCheckOnline();
   const {loggedUser} = useContext(UserContext)
+  const cartItems = useSelector((store)=>store.cart.items)
+  console.log(cartItems);
+
   return (
     <div className="flex justify-between">
       <div className="logoContainer">
@@ -27,7 +31,7 @@ const Header = () => {
           <li className="px-5">
             <Link to="/about">About us</Link>
           </li>
-          <li className="px-5">Cart</li>
+          <li className="px-5 font-bold"><Link to="/cart">Cart - ({cartItems.length} items)</Link></li>
           <li className="px-5 font-bold">{loggedUser}</li>
           <button
             className="login-btn"
