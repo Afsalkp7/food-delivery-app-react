@@ -5,7 +5,7 @@
 
 # template
 
- *
+
  * Header
  *  - logo
  *  - nav items
@@ -18,8 +18,7 @@
  *  - address
  *  - contact
  *  - copyright
- *
- */
+
 
  # export default
  export default Component
