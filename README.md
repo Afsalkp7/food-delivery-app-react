@@ -182,7 +182,7 @@ IN CASE OF FUNCTIONAL COMPONENT
 
 # Higher order component
  Its a function that take a component and return a component (same with some extra features)
-
+<hr />
 
 # REDUX toolkit
  - install @redux/toolkit
