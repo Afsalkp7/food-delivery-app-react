@@ -1,5 +1,5 @@
 # REACT FOOD APP 🍔
-Creating for studying react and redux
+Using REACT and REDUX
 
 - Props like argument of javascript function
 - Its just pass like argumrents
