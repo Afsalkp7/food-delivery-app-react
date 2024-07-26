@@ -1,9 +1,6 @@
 # REACT FOOD APP 🍔
 Using REACT and REDUX
 
-- Props like argument of javascript function
-- Its just pass like argumrents
-
 
 # template
 
@@ -40,6 +37,10 @@ Using REACT and REDUX
  whenever a state variable updates react re render the component
 
 # React reconciliation algorithm (React fiber)
+
+# React props
+- Props like argument of javascript function
+- Its just pass like argumrents
 
 # state variable 
 when ever a set variable update , react triggers a reconciliation cycle (re render the component)
