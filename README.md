@@ -1,6 +1,6 @@
 # REACT FOOD APP 🍔
 Using REACT and REDUX
- -AKshay saini video
+ -Akshay saini video
 
 # template
 
